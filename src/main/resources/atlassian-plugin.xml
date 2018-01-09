@@ -13,44 +13,53 @@
     <!-- add our web resources -->
     <web-resource key="progressoft-space-resources" name="progressoft-space Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
-        
+        <dependency>com.atlassian.confluence.plugins.confluence-create-content-plugin:resources</dependency>
+       
+        <transformation extension="soy">
+        	 <transformer key="soyTransformer">
+                <functions>com.atlassian.confluence.plugins.soy:soy-core-functions
+                </functions>
+        	  </transformer>
+  		</transformation>
+    
         <resource type="download" name="progressoft-space.css" location="/css/progressoft-space.css"/>
         <resource type="download" name="progressoft-space.js" location="/js/progressoft-space.js"/>
+        <resource type="download" name="PSbp.soy.js" location="/soy/PSbp.soy" />
         <resource type="download" name="images/" location="/images"/>
 
         <context>progressoft-space</context>
-    </web-resource>
-    <web-resource key="spacebp-resources" name="spacebp Web Resources">
-        <transformation extension="soy">
-            <transformer key="soyTransformer">
-                <functions>com.atlassian.confluence.plugins.soy:soy-core-functions</functions>
-            </transformer>plugin
-            <transformation extension="js">
-                <transformer key="jsI18n"/>
-            </transformation>
-        </transformation>
-         <resource type="download" name="spacebp.css" location="/css/spacebp.css"/>
-        <resource type="download" name="spacebp.js" location="/js/spacebp.js"/>
-        <resource type="download" name="dialog-page.js" location="/soy/dialog-page.soy"/>
-        <resource type="download" name="images/" location="/images"/>
-        <dependency>com.atlassian.confluence.plugins.confluence-create-content-plugin:space-blueprints</dependency>   <!-- This dependency is not required for confluence 5.4+ -->
         <context>atl.general</context>
-        <context>atl.admin</context>
+   		<context>atl.admin</context>
     </web-resource>
+    
+    <!-- Blueprint -->
+      <blueprint key="my-blueprint" content-template-key="progressoft-space-template" index-key="my-index" >
+      <dialog-wizard key="progressoft-space-wizard">
+         <dialog-page id="page1Id" template-key="MyPlugin.Blueprints.progressoft.page1Form" title-key="my.blueprint.wizard.page1.title" last="true"/>
+    </dialog-wizard>
+    </blueprint>
+ 
     <web-item key='progressoft-space-blueprint-item' i18n-name-key='confluence.blueprints.space.progressoft.name'
               section='system.create.space.dialog/content'>
         <description key='confluence.blueprints.space.progressoft.description'/>
         <param name='blueprintKey' value='progressoft-space-blueprint'/>
     </web-item>
+    
     <space-blueprint key="progressoft-space-blueprint" i18n-name-key="confluence.blueprints.space.progressoft.name" category="ProgressSoft Default">
     <dialog-wizard key="progressoft-space-blueprint-wizard">
         <dialog-page id="ProgressoftSpaceId"
-                     template-key="Confluence.SpaceBlueprints.Example.dialogForm"
+                     template-key="Confluence.SpaceBlueprints.Progressoft.dialogForm"
                      title-key="confluence.blueprints.space.progressoft.dialog.create.title"
                      description-header-key="confluence.blueprints.space.progressoft.dialog.create.heading"
                      description-content-key="confluence.blueprints.space.progressoft.dialog.create.description"
                      last="true"/>
    		 </dialog-wizard>
 	</space-blueprint>
-    
+
+    <!-- Template for Blueprint -->
+	<content-template key="progressoft-space-template" template-title-key="my.blueprint.title">
+    <resource name="template" type="download" location="/templates/mytemplate.xml" />
+	<!-- <context-provider class="com.example.plugins.tutorial.confluence.simplebp.MyContextProvider" /> -->
+	</content-template>
+	
 </atlassian-plugin>
