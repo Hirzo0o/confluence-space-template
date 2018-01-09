@@ -1,0 +1,15 @@
+{namespace MyPlugin.Blueprints.Sample}
+/**
+*  A form that accepts a template name
+*/
+ 
+{template .page1Form}
+    <form action="#" method="post" class="aui">
+      <fieldset>
+        <div class="field-group">
+            <label for="vname">{getText('my.blueprint.form.label.title.vName')}</label>
+            <input id="vname" class="text" type="text" name="vName">
+        </div>
+      </fieldset>
+    </form>
+{/template}

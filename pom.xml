@@ -5,7 +5,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.progressoft.plugins.tutorial.confluence.spacebp</groupId>
+    <groupId>com.progressoft.plugins.confluence.spacebp</groupId>
     <artifactId>progressoft-space</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
@@ -14,8 +14,8 @@
         <url>https://www.progressoft.com/</url>
     </organization>
 
-    <name>progressoft-space-template</name>
-    <description>This is the com.progressoft.plugins.tutorial.confluence.spacebp:progressoft-space plugin for Atlassian Confluence.</description>
+    <name>Progressoft-Space-Template</name>
+    <description>This is the Standard of Progressoft-space plugin for Manuals Confluence.</description>
     <packaging>atlassian-plugin</packaging>
 
     <dependencies>
@@ -52,7 +52,13 @@
             <version>1</version>
             <scope>provided</scope>
         </dependency>
-
+        
+		<dependency>
+		   <groupId>com.atlassian.confluence.plugins</groupId>
+		   <artifactId>confluence-create-content-plugin</artifactId>
+		   <version>${create.content.version}</version>
+		   <scope>provided</scope>
+		</dependency>
         <!-- WIRED TEST RUNNER DEPENDENCIES -->
         <dependency>
             <groupId>com.atlassian.plugins</groupId>
@@ -185,6 +191,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <create.content.version>6.0.13</create.content.version>
     </properties>
 
 </project>
