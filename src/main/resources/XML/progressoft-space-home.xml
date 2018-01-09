@@ -1,0 +1,11 @@
+    <ac:layout-section ac:type="two_right_sidebar">
+        <ac:layout-cell>
+            <h2><at:i18n at:key="confluence.blueprints.space.progressoft.home.children.heading" /></h2>
+            <p>
+               <ac:macro ac:name="children">
+                   <ac:parameter ac:name="page"></ac:parameter>
+                   <ac:parameter ac:name="all">true</ac:parameter>                            
+               </ac:macro>
+            </p>
+        </ac:layout-cell>
+    </ac:layout-section>
