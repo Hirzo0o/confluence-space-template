@@ -1,11 +1,112 @@
-    <ac:layout-section ac:type="two_right_sidebar">
-        <ac:layout-cell>
-            <h2><at:i18n at:key="confluence.blueprints.space.progressoft.home.children.heading" /></h2>
-            <p>
-               <ac:macro ac:name="children">
-                   <ac:parameter ac:name="page"></ac:parameter>
-                   <ac:parameter ac:name="all">true</ac:parameter>                            
-               </ac:macro>
-            </p>
-        </ac:layout-cell>
-    </ac:layout-section>
+<ac:layout><ac:layout-section ac:type="two_right_sidebar"><ac:layout-cell>
+<div align="center" style="text-align: left;">
+<h2 style="text-align: left;"><span style="color: rgb(0,0,255);">Introduction&nbsp;</span></h2><span>This module provides the functionality of defining and managing supported participants types, However all types can be distinctively defined by relating each type to its profile details, Through this module the system provides ability to add new participants and maintaining their information such as (ID, IBAN, BIC, message type participant type, debit and credit limits).</span>
+<h2 style="text-align: left;"><span style="color: rgb(0,0,255);">Appendix&nbsp;</span></h2>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Filed Name</strong></p></td>
+<td>
+<p><strong>Notes</strong></p></td></tr>
+<tr>
+<td>
+<p>Code</p></td>
+<td>
+<p>The participant code</p></td></tr>
+<tr>
+<td>
+<p>Short Name</p></td>
+<td>
+<p>The participant short name</p></td></tr>
+<tr>
+<td>
+<p>Full Name</p></td>
+<td>
+<p>The participant full name</p></td></tr>
+<tr>
+<td>
+<p>BIC</p></td>
+<td>
+<p>The participant Bank Identifier Code</p></td></tr>
+<tr>
+<td>
+<p>Participation Type</p></td>
+<td>
+<p>The participant type, which can be direct, indirect, sub-direct, or a technical agent</p>
+<p><strong>Notes :</strong> If Participant Type is:</p>
+<p>- <strong>Direct</strong>: Disable both Settling and Communicating Participants and set them optional</p>
+<p>- <strong>Indirect</strong>: Disable Settling and set it as optional and Enable Communicating and set it as required</p>
+<p>- <strong>Technical</strong>: Disable Communicating and set it as optional and Enable Settling and set it as required</p>
+<p><strong>- Sub-Direct</strong>: Enable both Settling and Communicating Participants and set them as required</p></td></tr>
+<tr>
+<td>
+<p>Settlement Participant</p></td>
+<td>
+<p>The settling participant of a technical or a sub-direct participant</p></td></tr>
+<tr>
+<td>
+<p>Communication Participant</p></td>
+<td>
+<p>The communicating participant of an indirect or a sub-direct participant</p></td></tr>
+<tr>
+<td>
+<p>Institution Type</p></td>
+<td>
+<p>The institution type of the participant</p></td></tr>
+<tr>
+<td>
+<p>Country</p></td>
+<td>
+<p>The country of the participant</p></td></tr>
+<tr>
+<td>
+<p>City</p></td>
+<td>
+<p>The city of the participant</p></td></tr>
+<tr>
+<td>
+<p>Phone</p></td>
+<td>
+<p>The phone number of the participant</p></td></tr>
+<tr>
+<td>
+<p>eMail</p></td>
+<td>
+<p>The email address of the participant</p></td></tr>
+<tr>
+<td>
+<p>Address</p></td>
+<td>
+<p>The address of the participant</p></td></tr>
+<tr>
+<td>
+<p>Suspend for Sending</p></td>
+<td>
+<p>A flag indicating whether the participant is suspended from sending messages or not</p></td></tr>
+<tr>
+<td>
+<p>Suspend for Receiving</p></td>
+<td>
+<p>A flag indicating whether the participant is suspended from receiving messages or not</p></td></tr>
+<tr>
+<td>
+<p>Default Participant</p></td>
+<td>
+<p>A flag indicating whether the participant is Defaulted or not</p></td></tr>
+<tr>
+<td>
+<p>Terminate Participant</p></td>
+<td>
+<p>A flag indicating whether the participant is Terminated or not</p></td></tr>
+<tr>
+<td>
+<p>Charges Exclusion Flag</p></td>
+<td>
+<p>A flag indicating whether to charge exclusion on the participant or apply predefined charges</p></td></tr>
+<tr>
+<td>
+<p>Limits Profile</p></td>
+<td>
+<p>Assign one of defined limits profiles to the Participant</p></td></tr></tbody></table></div></ac:layout-cell><ac:layout-cell><ac:structured-macro ac:macro-id="5d3fabd0-c0f1-4540-a4bd-caa63e74b27b" ac:name="info" ac:schema-version="1"><ac:parameter ac:name="icon">false</ac:parameter><ac:parameter ac:name="title">Page Contents</ac:parameter><ac:rich-text-body>
+<p><ac:structured-macro ac:macro-id="532f645f-2814-490d-a6a1-5cb033c6e730" ac:name="toc" ac:schema-version="1" /></p></ac:rich-text-body></ac:structured-macro><ac:structured-macro ac:macro-id="3bdff050-b17f-4e03-8c7e-9b9f4ed5ce19" ac:name="info" ac:schema-version="1"><ac:parameter ac:name="icon">false</ac:parameter><ac:parameter ac:name="title">Read More</ac:parameter><ac:rich-text-body><ac:structured-macro ac:macro-id="1de59af4-6934-41b6-8a7f-7818de8540f1" ac:name="pagetree" ac:schema-version="1"><ac:parameter ac:name="root"><ac:link><ri:page ri:content-title="Participants Management " /></ac:link></ac:parameter></ac:structured-macro></ac:rich-text-body></ac:structured-macro></ac:layout-cell></ac:layout-section></ac:layout>
